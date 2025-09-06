@@ -14,7 +14,7 @@ export default function CommunityPage() {
     {
       id: 2,
       user: { name: "ゆあ", avatar: "/diverse-user-avatars.png", subtitle: "今年初？" },
-      image: "/placeholder-dl40b.png",
+      image: "/IMG_0784.jpg",
       likes: 8,
     },
     {
