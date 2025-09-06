@@ -299,17 +299,17 @@ export default function ProfilePage() {
             {/* Posts Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8">
               {posts.length > 0 ? (
-                posts.map((post) => (
-                  <div key={post.id} className="aspect-square">
-                   {post.images[0] && (
-                    <img
-                      src={post.images[0]}
-                      alt="User post"
-                       className="w-full h-full object-cover rounded-lg sm:rounded-xl"
-                    />
-                    )}
-                  </div>
-                ))
+               posts.map((post) =>
+  post.images[0] ? (
+    <div key={post.id} className="aspect-square">
+      <img
+        src={post.images[0]}
+        alt="User post"
+        className="w-full h-full object-cover rounded-lg sm:rounded-xl"
+      />
+    </div>
+  ) : null
+)
               ) : (
                 // Default sample images when no posts exist
                 <>
