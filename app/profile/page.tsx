@@ -301,11 +301,13 @@ export default function ProfilePage() {
               {posts.length > 0 ? (
                 posts.map((post) => (
                   <div key={post.id} className="aspect-square">
+                   {post.images[0] && (
                     <img
-                      src={post.images[0] || "/placeholder.svg"}
+                      src={post.images[0]}
                       alt="User post"
-                      className="w-full h-full object-cover rounded-lg sm:rounded-xl"
+                       className="w-full h-full object-cover rounded-lg sm:rounded-xl"
                     />
+                    )}
                   </div>
                 ))
               ) : (
