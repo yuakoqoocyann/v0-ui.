@@ -307,82 +307,76 @@ export default function ResultsPage() {
     hobbyRecommendationsByType["I-X-P-F"]
 
   return (
-    <div className="min-h-screen bg-[#fdfbf4] w-full">
+    <div className="min-h-screen bg-[#fdfbf4]">
       <div className="w-full bg-[#fdfbf4] flex flex-col">
-        {/* Header */}
-        <div className="relative">
-          <svg
-            viewBox="0 0 400 120"
-            className="w-full h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32"
-            style={{ backgroundColor: "#f4a261" }}
+        {/* Header with curved orange wave */}
+        <header className="relative w-full h-[200px] lg:h-[250px] xl:h-[300px] overflow-hidden">
+          <h1
+            className="absolute top-5 left-10 lg:top-8 lg:left-16 xl:top-12 xl:left-24 font-bold text-4xl lg:text-6xl xl:text-8xl text-[#236483] z-10"
+            style={{
+              fontFamily: "Fredoka One, cursive",
+              textShadow: "3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3)",
+            }}
           >
-            <path d="M0,0 L400,0 L400,60 Q200,100 0,60 Z" fill="#f4a261" />
+            ChoMee
+          </h1>
+          <svg
+            className="absolute bottom-0 left-0 w-full h-[200px] lg:h-[250px] xl:h-[300px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 200"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#F49342"
+              fillOpacity="0.53"
+              d="M0,100 C240,200 480,0 720,100 C960,200 1200,0 1440,100 L1440,0 L0,0 Z"
+            ></path>
           </svg>
-          <div className="absolute top-0 left-0 right-0 flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-2 sm:pt-3">
-            <div className="text-xs sm:text-sm font-medium text-gray-800">9:41</div>
-            <div className="flex items-center space-x-1">
-              <div className="flex space-x-1">
-                <div className="w-1 h-2 sm:h-3 bg-gray-800 rounded-full"></div>
-                <div className="w-1 h-2 sm:h-3 bg-gray-800 rounded-full"></div>
-                <div className="w-1 h-2 sm:h-3 bg-gray-800 rounded-full"></div>
-                <div className="w-1 h-2 sm:h-3 bg-gray-600 rounded-full"></div>
-              </div>
-              <svg className="w-3 h-2 sm:w-4 sm:h-3 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
-              </svg>
-              <div className="w-4 sm:w-6 h-2 sm:h-3 border border-gray-800 rounded-sm">
-                <div className="w-3 sm:w-4 h-1 sm:h-2 bg-gray-800 rounded-sm m-0.5"></div>
-              </div>
-            </div>
-          </div>
-          <div className="absolute top-6 sm:top-8 left-4 sm:left-6 md:left-8 lg:left-12 xl:left-16">
-            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-blue-600">ChoMee</h1>
-          </div>
-        </div>
+        </header>
 
         {/* Content */}
-        <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 pb-48 sm:pb-56 md:pb-64 lg:pb-72 xl:pb-80 flex-1">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-6 sm:mb-8 md:mb-12">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-blue-600 mb-3 sm:mb-4 md:mb-6">
-                あなたの趣味タイプ
-              </h2>
-              <div className="bg-orange-100 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 border-2 border-orange-300 max-w-4xl mx-auto">
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-orange-600 mb-2 sm:mb-3 md:mb-4">
-                  {personalityType.name}
-                </h3>
-                <p className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
-                  {personalityType.description}
-                </p>
-              </div>
+        <div className="px-6 lg:px-12 xl:px-20 py-8 lg:py-12 xl:py-16 pb-56 lg:pb-64 xl:pb-80 flex-1">
+          <div className="text-center mb-6 sm:mb-8 md:mb-12">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#236483] mb-3 sm:mb-4 md:mb-6">
+              あなたの趣味タイプ
+            </h2>
+            <div className="bg-orange-100 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 border-2 border-orange-300 max-w-4xl mx-auto">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-orange-600 mb-2 sm:mb-3 md:mb-4">
+                {personalityType.name}
+              </h3>
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+                {personalityType.description}
+              </p>
             </div>
+          </div>
 
-            <div className="text-center mb-6 sm:mb-8 md:mb-12">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-blue-600 mb-2">
-                あなたにおすすめの趣味
-              </h2>
-            </div>
+          <div className="text-center mb-6 sm:mb-8 md:mb-12">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#236483] mb-2">
+              あなたにおすすめの趣味
+            </h2>
+          </div>
 
-            {/* Hobby Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
-              {hobbies.map((hobby, index) => (
-                <div key={index} className="bg-blue-600 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-lg">
-                  <div className="flex flex-col items-center space-y-4">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 bg-white rounded-xl overflow-hidden flex-shrink-0">
-                      <img
-                        src={hobby.image || "/placeholder.svg"}
-                        alt={hobby.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="text-center">
-                      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-3">
-                        {hobby.title}
-                      </h3>
-                      <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-3 sm:mb-4">
-                        {hobby.description}
-                      </p>
-                      <div className="flex items-center justify-center space-x-2">
+          {/* Hobby Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+            {hobbies.map((hobby, index) => (
+              <div key={index} className="bg-blue-600 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-lg">
+                <div className="flex flex-col items-center space-y-4">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 bg-white rounded-xl overflow-hidden flex-shrink-0">
+                    <img
+                      src={hobby.image || "/placeholder.svg"}
+                      alt={hobby.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-3">
+                      {hobby.title}
+                    </h3>
+                    <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-3 sm:mb-4">
+                      {hobby.description}
+                    </p>
+                    <Link href={`/hobby-rooms?hobby=${encodeURIComponent(hobby.title)}&type=${personalityTypeKey}`}>
+                      <div className="flex items-center justify-center space-x-2 cursor-pointer hover:scale-105 transition-transform duration-200">
                         <span className="text-white text-xs sm:text-sm md:text-base">コミュニティに参加</span>
                         <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-orange-500 rounded-full flex items-center justify-center">
                           <svg
@@ -395,24 +389,24 @@ export default function ResultsPage() {
                           </svg>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
 
-            {/* Back Button */}
-            <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24 max-w-md mx-auto mb-8 relative z-20">
-              <Link href="/">
-                <button className="w-full py-3 sm:py-4 md:py-5 lg:py-6 xl:py-8 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 bg-blue-600 text-white rounded-2xl sm:rounded-3xl font-medium text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl shadow-lg hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 transform hover:scale-105 active:scale-95 cursor-pointer border-none outline-none focus:ring-4 focus:ring-blue-300">
-                  ホームに戻る
-                </button>
-              </Link>
-            </div>
+          {/* Back Button */}
+          <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24 max-w-md mx-auto mb-8 relative z-20">
+            <Link href="/">
+              <button className="w-full py-3 sm:py-4 md:py-5 lg:py-6 xl:py-8 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 bg-blue-600 text-white rounded-2xl sm:rounded-3xl font-medium text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl shadow-lg hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 transform hover:scale-105 active:scale-95 cursor-pointer border-none outline-none focus:ring-4 focus:ring-blue-300">
+                ホームに戻る
+              </button>
+            </Link>
           </div>
         </div>
 
-        {/* Bottom Navigation */}
+        {/* Footer with curved blue wave and navigation */}
         <footer className="fixed bottom-0 left-0 w-full h-[160px] lg:h-[200px] xl:h-[250px] overflow-hidden">
           <svg
             className="absolute top-0 left-0 w-full h-[160px] lg:h-[200px] xl:h-[250px]"
@@ -428,7 +422,6 @@ export default function ResultsPage() {
           </svg>
 
           <div className="absolute bottom-5 lg:bottom-8 w-full flex justify-around items-center px-8 lg:px-16">
-            {/* Search Icon */}
             <Link href="/search">
               <button className="transition-transform duration-200 hover:scale-125 focus:scale-125 outline-none">
                 <svg
@@ -447,7 +440,6 @@ export default function ResultsPage() {
               </button>
             </Link>
 
-            {/* Profile + Arrow Icon */}
             <Link href="/community">
               <button className="transition-transform duration-200 hover:scale-125 focus:scale-125 outline-none">
                 <div className="w-10 h-10 lg:w-14 lg:h-14">
@@ -478,7 +470,6 @@ export default function ResultsPage() {
               </button>
             </Link>
 
-            {/* Profile Icon */}
             <Link href="/profile">
               <button className="transition-transform duration-200 hover:scale-125 focus:scale-125 outline-none">
                 <svg className="w-8 h-8 lg:w-11 lg:h-11 text-white mt-3" fill="currentColor" viewBox="0 0 20 20">

@@ -203,7 +203,7 @@ export default function DiagnosisPage() {
 
             <div className="absolute bottom-5 lg:bottom-8 w-full flex justify-around items-center px-8 lg:px-16">
               {/* Search Icon */}
-              <Link href="/community">
+              <Link href="/search">
                 <button className="transition-transform duration-200 hover:scale-125 focus:scale-125 outline-none">
                   <svg
                     className="w-9 h-9 lg:w-12 lg:h-12 text-white"
@@ -222,7 +222,7 @@ export default function DiagnosisPage() {
               </Link>
 
               {/* Profile + Arrow Icon */}
-              <Link href="/">
+              <Link href="/community">
                 <button className="transition-transform duration-200 hover:scale-125 focus:scale-125 outline-none">
                   <div className="w-10 h-10 lg:w-14 lg:h-14">
                     <svg
@@ -409,7 +409,7 @@ export default function DiagnosisPage() {
 
           <div className="absolute bottom-5 lg:bottom-8 w-full flex justify-around items-center px-8 lg:px-16">
             {/* Search Icon */}
-            <Link href="/community">
+            <Link href="/search">
               <button className="transition-transform duration-200 hover:scale-125 focus:scale-125 outline-none">
                 <svg
                   className="w-9 h-9 lg:w-12 lg:h-12 text-white"
@@ -428,7 +428,7 @@ export default function DiagnosisPage() {
             </Link>
 
             {/* Profile + Arrow Icon */}
-            <Link href="/">
+            <Link href="/community">
               <button className="transition-transform duration-200 hover:scale-125 focus:scale-125 outline-none">
                 <div className="w-10 h-10 lg:w-14 lg:h-14">
                   <svg
