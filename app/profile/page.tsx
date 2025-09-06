@@ -162,9 +162,7 @@ export default function ProfilePage() {
                       編集
                     </button>
                   )}
-                  <button className="bg-blue-600 text-white px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 xl:px-10 xl:py-6 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
-                    💬
-                  </button>
+                  
                 </div>
               </div>
 
