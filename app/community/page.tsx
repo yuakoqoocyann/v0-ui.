@@ -26,7 +26,7 @@ export default function CommunityPage() {
     {
       id: 4,
       user: { name: "よう", avatar: "/diverse-user-avatars.png", subtitle: "城に行ったでござる。聖徳太子になりたい。常にそうかんがえている。同じことを思っている者はいないか？？先ほど聖徳太子を目指す会を作ったから、ぜひ参加して欲しい。仲間募集中。＜今日の和歌＞　’高き城　仰ぐ御影に　春霞　太子の教え　風に伝わる’　　では。" },
-      image: "/DSC_2345.jpg"," },
+     
       image: "/DSC_2345.jpg",
       likes: 20,
     },
