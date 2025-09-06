@@ -7,8 +7,8 @@ export default function CommunityPage() {
   const [posts] = useState([
     {
       id: 1,
-      user: { name: "Mihaaa", avatar: "/diverse-user-avatars.png", subtitle: "キャンプ！" },
-      image: "/placeholder-azust.png",
+      user: { name: "Mihaaa", avatar: "/diverse-user-avatars.png", subtitle: "今年も来ました！" },
+      image: "/IMG_0438.jpg",
       likes: 12,
     },
     {
@@ -26,19 +26,19 @@ export default function CommunityPage() {
     {
       id: 4,
       user: { name: "よう", avatar: "/diverse-user-avatars.png", subtitle: "城に行きました！" },
-      image: "/placeholder-2s66n.png",
+      image: "/DSC_2345.jpg",
       likes: 20,
     },
     {
       id: 5,
-      user: { name: "Mihaaa", avatar: "/diverse-user-avatars.png", subtitle: "キャンプ料理" },
-      image: "/placeholder-iiib7.png",
+      user: { name: "あかり", avatar: "/diverse-user-avatars.png", subtitle: "たまや～" },
+      image: "/IMG_0687.jpg",
       likes: 6,
     },
     {
       id: 6,
-      user: { name: "もなか", avatar: "/diverse-user-avatars.png", subtitle: "RV旅行" },
-      image: "/placeholder-e7bkk.png",
+      user: { name: "Takuro", avatar: "/diverse-user-avatars.png", subtitle: "ガンダム実写版" },
+      image: "/DSC_1744.jpg",
       likes: 11,
     },
     {
@@ -49,8 +49,8 @@ export default function CommunityPage() {
     },
     {
       id: 8,
-      user: { name: "よう", avatar: "/diverse-user-avatars.png", subtitle: "ひまわり" },
-      image: "/placeholder-dw9ou.png",
+      user: { name: "ひな", avatar: "/diverse-user-avatars.png", subtitle: "めっちゃおいしかった！" },
+      image: "/IMG_9817.jpg",
       likes: 9,
     },
   ])
