@@ -13,13 +13,13 @@ export default function CommunityPage() {
     },
     {
       id: 2,
-      user: { name: "ゆあ", avatar: "/diverse-user-avatars.png", subtitle: "今年初？" },
+      user: { name: "ゆあ", avatar: "/スクリーンショット 2025-09-06 184727.png", subtitle: "今年初？" },
       image: "/IMG_0784.jpg",
       likes: 8,
     },
     {
       id: 3,
-      user: { name: "しおり", avatar: "/diverse-user-avatars.png", subtitle: "ピーヌで" },
+      user: { name: "しおり", avatar: "/スクリーンショット 2025-09-06 184755.png", subtitle: "ピーヌで" },
       image: "/mountain-landscape-view.png",
       likes: 15,
     },
@@ -31,7 +31,7 @@ export default function CommunityPage() {
     },
     {
       id: 5,
-      user: { name: "あかり", avatar: "/diverse-user-avatars.png", subtitle: "楽しかったー！！！！" },
+      user: { name: "あかり", avatar: "/スクリーンショット 2025-09-06 184747.png", subtitle: "楽しかったー！！！！" },
       image: "/IMG_0687.jpg",
       likes: 6,
     },
@@ -49,7 +49,7 @@ export default function CommunityPage() {
     },
     {
       id: 8,
-      user: { name: "Yu", avatar: "/diverse-user-avatars.png", subtitle: "めっちゃおいしかった！" },
+      user: { name: "Yu", avatar: "/スクリーンショット 2025-09-06 184738.png", subtitle: "めっちゃおいしかった！" },
       image: "/IMG_9817.jpg",
       likes: 9,
     },
