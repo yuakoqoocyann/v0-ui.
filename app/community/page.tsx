@@ -7,25 +7,25 @@ export default function CommunityPage() {
   const [posts] = useState([
     {
       id: 1,
-      user: { name: "Mihaaa", avatar: "/diverse-user-avatars.png", subtitle: "お手軽キャンプ飯！" },
+      user: { name: "Mihaaa", avatar: "/diverse-user-avatars.png", subtitle: "キャンプ！" },
       image: "/placeholder-azust.png",
       likes: 12,
     },
     {
       id: 2,
-      user: { name: "もなか", avatar: "/diverse-user-avatars.png", subtitle: "今年初？" },
+      user: { name: "ゆあ", avatar: "/diverse-user-avatars.png", subtitle: "今年初？" },
       image: "/placeholder-dl40b.png",
       likes: 8,
     },
     {
       id: 3,
-      user: { name: "Takumi", avatar: "/diverse-user-avatars.png", subtitle: "ピーヌで" },
+      user: { name: "しおり", avatar: "/diverse-user-avatars.png", subtitle: "ピーヌで" },
       image: "/mountain-landscape-view.png",
       likes: 15,
     },
     {
       id: 4,
-      user: { name: "よう", avatar: "/diverse-user-avatars.png", subtitle: "飛騨高山行きました！" },
+      user: { name: "よう", avatar: "/diverse-user-avatars.png", subtitle: "城に行きました！" },
       image: "/placeholder-2s66n.png",
       likes: 20,
     },
@@ -49,7 +49,7 @@ export default function CommunityPage() {
     },
     {
       id: 8,
-      user: { name: "よう", avatar: "/diverse-user-avatars.png", subtitle: "焚き火タイム" },
+      user: { name: "よう", avatar: "/diverse-user-avatars.png", subtitle: "ひまわり" },
       image: "/placeholder-dw9ou.png",
       likes: 9,
     },
