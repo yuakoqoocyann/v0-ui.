@@ -31,7 +31,7 @@ export default function CommunityPage() {
     },
     {
       id: 5,
-      user: { name: "あかり", avatar: "/diverse-user-avatars.png", subtitle: "たまや～" },
+      user: { name: "あかり", avatar: "/diverse-user-avatars.png", subtitle: "楽しかったー！！！！" },
       image: "/IMG_0687.jpg",
       likes: 6,
     },
@@ -49,7 +49,7 @@ export default function CommunityPage() {
     },
     {
       id: 8,
-      user: { name: "ひな", avatar: "/diverse-user-avatars.png", subtitle: "めっちゃおいしかった！" },
+      user: { name: "Yu", avatar: "/diverse-user-avatars.png", subtitle: "めっちゃおいしかった！" },
       image: "/IMG_9817.jpg",
       likes: 9,
     },
