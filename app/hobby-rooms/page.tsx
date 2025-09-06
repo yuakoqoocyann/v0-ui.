@@ -309,6 +309,7 @@ export default function HobbyRoomsPage() {
   const [showCreateForm, setShowCreateForm] = useState(false)
   const [newRoomName, setNewRoomName] = useState("")
   const [joinedRooms, setJoinedRooms] = useState<number[]>([])
+  const [createdRooms, setCreatedRooms] = useState<any[]>([])
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -316,47 +317,44 @@ export default function HobbyRoomsPage() {
       if (savedJoinedRooms) {
         setJoinedRooms(JSON.parse(savedJoinedRooms))
       }
+
+      const savedCreatedRooms = localStorage.getItem("createdRooms")
+      if (savedCreatedRooms) {
+        setCreatedRooms(JSON.parse(savedCreatedRooms))
+      }
     }
   }, [])
 
   const rooms = mockTalkRooms[hobby as keyof typeof mockTalkRooms] || []
 
+  const allRooms = [...rooms, ...createdRooms.filter((room) => room.hobby === hobby)]
+
   const handleJoinRoom = (roomId: number) => {
-    let updatedJoinedRooms: number[]
-    if (joinedRooms.includes(roomId)) {
-      updatedJoinedRooms = joinedRooms.filter((id) => id !== roomId)
-    } else {
-      updatedJoinedRooms = [...joinedRooms, roomId]
-    }
-
-    setJoinedRooms(updatedJoinedRooms)
-
-    if (typeof window !== "undefined") {
-      const joinedRoomDetails = updatedJoinedRooms
-        .map((id) => {
-          for (const [hobbyName, hobbyRooms] of Object.entries(mockTalkRooms)) {
-            const room = hobbyRooms.find((r) => r.id === id)
-            if (room) {
-              return {
-                id: room.id,
-                name: room.name,
-                hobby: hobbyName,
-                members: room.members,
-                lastMessage: room.lastMessage,
-              }
-            }
-          }
-          return null
-        })
-        .filter(Boolean)
-
-      localStorage.setItem("joinedRoomDetails", JSON.stringify(joinedRoomDetails))
-      localStorage.setItem("joinedRooms", JSON.stringify(updatedJoinedRooms))
+    const room = allRooms.find((r) => r.id === roomId)
+    if (room) {
+      window.location.href = `/chat?roomId=${roomId}&roomName=${encodeURIComponent(room.name)}&hobby=${encodeURIComponent(hobby)}${personalityType ? `&type=${personalityType}` : ""}`
     }
   }
 
   const handleCreateRoom = () => {
     if (newRoomName.trim()) {
+      const newRoom = {
+        id: Date.now(),
+        name: newRoomName.trim(),
+        members: 1,
+        lastMessage: "ルームが作成されました",
+        isActive: true,
+        hobby: hobby,
+        createdBy: "current_user",
+      }
+
+      const updatedCreatedRooms = [...createdRooms, newRoom]
+      setCreatedRooms(updatedCreatedRooms)
+
+      if (typeof window !== "undefined") {
+        localStorage.setItem("createdRooms", JSON.stringify(updatedCreatedRooms))
+      }
+
       console.log("[v0] Creating new room:", newRoomName)
       setNewRoomName("")
       setShowCreateForm(false)
@@ -443,8 +441,8 @@ export default function HobbyRoomsPage() {
 
             {/* Talk Rooms List */}
             <div className="space-y-4 sm:space-y-6">
-              {rooms.length > 0 ? (
-                rooms.map((room) => (
+              {allRooms.length > 0 ? (
+                allRooms.map((room) => (
                   <div key={room.id} className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-200">
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
@@ -452,6 +450,9 @@ export default function HobbyRoomsPage() {
                           <h3 className="text-lg sm:text-xl font-bold text-gray-800">{room.name}</h3>
                           {room.isActive && (
                             <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">アクティブ</span>
+                          )}
+                          {room.createdBy && (
+                            <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full">作成済み</span>
                           )}
                         </div>
                         <p className="text-gray-600 text-sm sm:text-base mb-2">{room.lastMessage}</p>
